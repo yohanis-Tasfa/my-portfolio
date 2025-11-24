@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section
-      id="Home"
+      id="home"
       className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden"
     >
       {/* Purple Glow Background */}

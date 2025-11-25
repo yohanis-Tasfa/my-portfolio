@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 const container = {
@@ -49,7 +48,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }} // 👈 makes animation rerun
+        viewport={{ once: false }} //  makes animation rerun
       >
         <motion.h1
           variants={item}

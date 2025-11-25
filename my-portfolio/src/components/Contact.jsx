@@ -66,115 +66,74 @@ export default function Contact() {
         </p>
 
         <div className="mt-20 grid md:grid-cols-2 gap-14">
-          <div>
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Connect With Me
-            </h2>
+          {/* center the form across medium+ screens */}
+          <div className="md:col-span-2 md:flex md:justify-center">
+            {/* FORM */}
+            <motion.form
+              onSubmit={onSubmit}
+              variants={container}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-lg max-w-2xl w-full"
+            >
+              <input
+                type="hidden"
+                name="from_name"
+                value="Portfolio Contact Form"
+              />
 
-            <p className="text-gray-300 leading-relaxed mb-8">
-              I'm always excited to discuss new opportunities and innovative
-              projects. Reach out anytime.
-            </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="text-gray-300 text-sm">Name </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your full name"
+                    className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
+                  />
+                </div>
 
-            <div className="flex gap-5 mt-4">
-              <a
-                href="https://github.com/yohanis-Tasfa"
-                target="_blank"
-                className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition"
-              >
-                <Github className="text-gray-300" size={24} />
-              </a>
+                <div>
+                  <label className="text-gray-300 text-sm">Email </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="your.email@example.com"
+                    className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
+                  />
+                </div>
+              </div>
 
-              <a
-                href="https://www.linkedin.com/in/yohanis-tasfa-93158b374"
-                target="_blank"
-                className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition"
-              >
-                <Linkedin className="text-sky-400" size={24} />
-              </a>
-
-              <a
-                href="https://t.me/jo_tesfa"
-                target="_blank"
-                className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition"
-              >
-                <Send className="text-pink-400" size={24} />
-              </a>
-
-              <a
-                href="mailto:yohanistesfa457@gmail.com"
-                className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition"
-              >
-                <Mail className="text-red-400" size={24} />
-              </a>
-            </div>
-          </div>
-
-          {/* FORM */}
-          <motion.form
-            onSubmit={onSubmit}
-            variants={container}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-lg"
-          >
-            <input
-              type="hidden"
-              name="from_name"
-              value="Portfolio Contact Form"
-            />
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="text-gray-300 text-sm">Name </label>
+              <div className="mt-6">
+                <label className="text-gray-300 text-sm">Subject </label>
                 <input
                   type="text"
-                  name="name"
+                  name="subject"
                   required
-                  placeholder="Your full name"
+                  placeholder="Project inquiry, collaboration, etc."
                   className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
                 />
               </div>
 
-              <div>
-                <label className="text-gray-300 text-sm">Email </label>
-                <input
-                  type="email"
-                  name="email"
+              <div className="mt-6">
+                <label className="text-gray-300 text-sm">Message </label>
+                <textarea
+                  rows="5"
+                  name="message"
                   required
-                  placeholder="your.email@example.com"
+                  placeholder="Tell me about your project or idea..."
                   className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
-                />
+                ></textarea>
               </div>
-            </div>
 
-            <div className="mt-6">
-              <label className="text-gray-300 text-sm">Subject </label>
-              <input
-                type="text"
-                name="subject"
-                required
-                placeholder="Project inquiry, collaboration, etc."
-                className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
-              />
-            </div>
-
-            <div className="mt-6">
-              <label className="text-gray-300 text-sm">Message </label>
-              <textarea
-                rows="5"
-                name="message"
-                required
-                placeholder="Tell me about your project or idea..."
-                className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="mt-6 w-full flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 transition text-white p-3 rounded-xl font-semibold"
-            >
-              {result ? result : "Send Message"}
-            </button>
-          </motion.form>
+              <button
+                type="submit"
+                className="mt-6 w-full flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 transition text-white p-3 rounded-xl font-semibold"
+              >
+                {result ? result : "Send Message"}
+              </button>
+            </motion.form>
+          </div>
         </div>
       </motion.div>
     </section>

@@ -59,18 +59,18 @@ export default function Hero() {
         <motion.h2
           variants={item}
           className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text 
-            bg-gradient-to-r from-purple-300 to-blue-400 mb-4"
+            bg-gradient-to-r from-purple-300 to-blue-400 mb-7"
         >
           Fullstack Web Developer
         </motion.h2>
 
         <motion.p
           variants={item}
-          className="text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
+          className="text-gray-300 text-xl max-w-2xl mx-auto leading-relaxed mb-12"
         >
           Turning ideas into seamless digital experiences. I craft clean,
           efficient code, design with intention, and build web solutions that
-          leave a lasting impact — shaping the web, one project at a time.
+          leave a lasting impact shaping the web, one project at a time.
         </motion.p>
 
         {/* Buttons */}

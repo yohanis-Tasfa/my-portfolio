@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Send, Mail } from "lucide-react";
 
 const container = {
   hidden: { opacity: 0, y: 30 },
@@ -94,11 +94,11 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://www.instagram.com/yoni__jo/"
+                href="https://t.me/jo_tesfa"
                 target="_blank"
                 className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition"
               >
-                <Instagram className="text-pink-400" size={24} />
+                <Send className="text-pink-400" size={24} />
               </a>
 
               <a
@@ -124,7 +124,7 @@ export default function Contact() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="text-gray-300 text-sm">Name *</label>
+                <label className="text-gray-300 text-sm">Name </label>
                 <input
                   type="text"
                   name="name"
@@ -135,7 +135,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="text-gray-300 text-sm">Email *</label>
+                <label className="text-gray-300 text-sm">Email </label>
                 <input
                   type="email"
                   name="email"
@@ -147,7 +147,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-6">
-              <label className="text-gray-300 text-sm">Subject *</label>
+              <label className="text-gray-300 text-sm">Subject </label>
               <input
                 type="text"
                 name="subject"
@@ -158,7 +158,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-6">
-              <label className="text-gray-300 text-sm">Message *</label>
+              <label className="text-gray-300 text-sm">Message </label>
               <textarea
                 rows="5"
                 name="message"

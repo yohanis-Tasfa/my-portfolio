@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const container = {
@@ -22,6 +23,14 @@ const item = {
 };
 
 export default function Hero() {
+  // function  scroll to project section
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -76,6 +85,7 @@ export default function Hero() {
         {/* Buttons */}
         <motion.div variants={item} className="flex justify-center gap-6">
           <button
+            onClick={() => scrollToSection("projects")}
             className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 
             text-white font-semibold shadow-lg hover:opacity-90 transition"
           >

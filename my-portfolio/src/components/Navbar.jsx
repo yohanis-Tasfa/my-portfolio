@@ -80,7 +80,7 @@ export default function Navbar() {
 
           <span
             className="cursor-pointer text-white hover:text-purple-400"
-            onClick={() => scrollToSection("skill")}
+            onClick={() => scrollToSection("skills")}
           >
             Skill
           </span>

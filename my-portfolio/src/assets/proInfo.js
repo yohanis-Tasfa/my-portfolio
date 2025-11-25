@@ -30,7 +30,7 @@ import RealestateImg from "../assets/images/realstate.png";
         "A modern real-estate platform showcasing properties with filtering, search, and elegant UI animations.",
       tech: ["React", "Node.js", "TailwindCSS", "Framer Motion"],
       image: RealestateImg,
-      demo: "#",
+      demo: "https://yoni-real-estate.netlify.app/",
       github: "https://github.com/yohanis-Tasfa/yoni-real-state",
     },
   ];

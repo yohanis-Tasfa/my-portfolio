@@ -1,7 +1,7 @@
 // src/components/About.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import MyPhoto from "../assets/images/Profile.png";
+import MyPhoto from "../assets/images/profile.png";
 
 const About = () => {
   return (

@@ -97,7 +97,7 @@ export default function Hero() {
             className="px-6 py-3 rounded-full border border-purple-400 text-purple-300 
               font-semibold hover:bg-purple-600/20 transition"
           >
-            Download Resume
+            Download CV
           </a>
         </motion.div>
       </motion.div>

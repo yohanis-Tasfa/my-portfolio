@@ -57,14 +57,17 @@ function Skills() {
           className="grid md:grid-cols-3 gap-14 mt-16"
         >
           {/* Frontend */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center group">
             <motion.div
-              whileHover={{ scale: 1.12 }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+              whileHover={{ scale: 1.3 }}
               className="w-48 h-48 bg-purple-500/10 border border-purple-500/40 rounded-full 
-             flex items-center justify-center shadow-[0_0_35px_rgba(168,85,247,0.35)]"
+                flex items-center justify-center shadow-[0_0_35px_rgba(168,85,247,0.35)]
+                group-hover:bg-purple-600/30 group-hover:border-purple-600/60"
             >
-              <Code size={55} className="text-purple-400" />
+              <Code
+                size={55}
+                className="text-purple-400 group-hover:text-purple-100"
+              />
             </motion.div>
             <h3 className="text-xl font-semibold mt-5 text-purple-300">
               Frontend
@@ -83,7 +86,7 @@ function Skills() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-1 rounded-full border border-purple-400 text-purple-300 text-sm shadow-lg bg-purple-500/10"
+                  className="px-4 py-1 rounded-full border border-purple-400 text-purple-300 text-sm shadow-lg bg-purple-500/10 group-hover:bg-purple-600/30 group-hover:text-white"
                 >
                   {skill}
                 </span>
@@ -92,14 +95,17 @@ function Skills() {
           </div>
 
           {/* Backend */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center group">
             <motion.div
-              whileHover={{ scale: 1.12 }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+              whileHover={{ scale: 1.3 }}
               className="w-48 h-48 bg-blue-500/10 border border-blue-500/40 rounded-full 
-             flex items-center justify-center shadow-[0_0_35px_rgba(59,130,246,0.35)]"
+                flex items-center justify-center shadow-[0_0_35px_rgba(59,130,246,0.35)]
+                group-hover:bg-blue-600/30 group-hover:border-blue-600/60"
             >
-              <Server size={55} className="text-blue-400" />
+              <Server
+                size={55}
+                className="text-blue-400 group-hover:text-blue-100"
+              />
             </motion.div>
             <h3 className="text-xl font-semibold mt-5 text-blue-300">
               Backend
@@ -116,7 +122,7 @@ function Skills() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-1 rounded-full border border-blue-400 text-blue-300 text-sm bg-blue-500/10 shadow-lg"
+                  className="px-4 py-1 rounded-full border border-blue-400 text-blue-300 text-sm bg-blue-500/10 shadow-lg group-hover:bg-blue-600/30 group-hover:text-white"
                 >
                   {skill}
                 </span>
@@ -125,17 +131,19 @@ function Skills() {
           </div>
 
           {/* Tools */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center group">
             <motion.div
-              whileHover={{ scale: 1.12 }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="w-48 h-48 bg-purple-500/10 border border-purple-500/40 rounded-full 
-             flex items-center justify-center shadow-[0_0_35px_rgba(168,85,247,0.35)]"
+              whileHover={{ scale: 1.3 }}
+              className="w-48 h-48 bg-orange-500/10 border border-orange-500/40 rounded-full 
+                flex items-center justify-center shadow-[0_0_35px_rgba(245,158,11,0.35)]
+                group-hover:bg-orange-600/30 group-hover:border-orange-600/60"
             >
-              <Wrench size={55} className="text-purple-400" />
+              <Wrench
+                size={55}
+                className="text-orange-400 group-hover:text-orange-100"
+              />
             </motion.div>
-
-            <h3 className="text-xl font-semibold mt-5 text-purple-300">
+            <h3 className="text-xl font-semibold mt-5 text-orange-300">
               Tools
             </h3>
 
@@ -143,7 +151,7 @@ function Skills() {
               {["Git", "GitHub", "VS Code", "Figma", "Vercel"].map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-1 rounded-full border border-purple-400 text-purple-300 text-sm bg-purple-500/10 shadow-lg"
+                  className="px-4 py-1 rounded-full border border-orange-400 text-orange-300 text-sm bg-orange-500/10 shadow-lg group-hover:bg-orange-600/30 group-hover:text-white"
                 >
                   {skill}
                 </span>

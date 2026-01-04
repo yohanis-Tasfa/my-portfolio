@@ -74,23 +74,16 @@ function Skills() {
             </h3>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
-              {[
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React",
-                "Next.js",
-                "Tailwind CSS",
-                "Framer Motion",
-                "TypeScript",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-1 rounded-full border border-purple-400 text-purple-300 text-sm shadow-lg bg-purple-500/10 group-hover:bg-purple-600/30 group-hover:text-white"
-                >
-                  {skill}
-                </span>
-              ))}
+              {["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"].map(
+                (skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-1 rounded-full border border-purple-400 text-purple-300 text-sm shadow-lg bg-purple-500/10 group-hover:bg-purple-600/30 group-hover:text-white"
+                  >
+                    {skill}
+                  </span>
+                )
+              )}
             </div>
           </div>
 
@@ -112,21 +105,16 @@ function Skills() {
             </h3>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
-              {[
-                "Node.js",
-                "Express",
-                "MongoDB",
-                "PostgreSQL",
-                "Firebase",
-                "REST APIs",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-1 rounded-full border border-blue-400 text-blue-300 text-sm bg-blue-500/10 shadow-lg group-hover:bg-blue-600/30 group-hover:text-white"
-                >
-                  {skill}
-                </span>
-              ))}
+              {["Node.js", "Express", "MongoDB", "Firebase", "REST APIs"].map(
+                (skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-1 rounded-full border border-blue-400 text-blue-300 text-sm bg-blue-500/10 shadow-lg group-hover:bg-blue-600/30 group-hover:text-white"
+                  >
+                    {skill}
+                  </span>
+                )
+              )}
             </div>
           </div>
 
@@ -148,7 +136,7 @@ function Skills() {
             </h3>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
-              {["Git", "GitHub", "VS Code", "Figma", "Vercel"].map((skill) => (
+              {["Git", "GitHub", "VS Code", "Render", "Vercel"].map((skill) => (
                 <span
                   key={skill}
                   className="px-4 py-1 rounded-full border border-orange-400 text-orange-300 text-sm bg-orange-500/10 shadow-lg group-hover:bg-orange-600/30 group-hover:text-white"

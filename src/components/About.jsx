@@ -13,7 +13,7 @@ const About = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0f0120] to-black"></div>
 
       {/* PURPLE GLOW */}
-      <div
+      {/* <div
         className="
           absolute 
           w-[300px] h-[300px] 
@@ -25,7 +25,7 @@ const About = () => {
           -translate-x-1/2 -translate-y-1/2
           pointer-events-none
         "
-      ></div>
+      ></div> */}
 
       {/* CONTENT */}
       <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">

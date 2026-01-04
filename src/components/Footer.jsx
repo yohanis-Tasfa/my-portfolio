@@ -9,11 +9,11 @@ function Footer() {
           {/* Left - Name + Role */}
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h2 className="text-xl font-bold text-white">Yohanis Tasfa</h2>
-            <p className="text-gray-400 text-sm">Full Stack Developer</p>
+            <p className="text-gray-400 text-sm">MERN Stack Developer</p>
           </div>
 
           {/* Center - Navigation */}
-          <nav className="flex gap-8 text-gray-300 text-lg">
+          {/* <nav className="flex gap-8 text-gray-300 text-lg">
             <a href="#home" className="hover:text-white transition">
               Home
             </a>
@@ -29,7 +29,7 @@ function Footer() {
             <a href="#contact" className="hover:text-white transition">
               Contact
             </a>
-          </nav>
+          </nav> */}
 
           {/* Right - Social Icons */}
           <div className="flex gap-5 mt-6 md:mt-0">

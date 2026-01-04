@@ -69,7 +69,7 @@ export default function Hero() {
           className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text 
             bg-gradient-to-r from-purple-300 to-blue-400 mb-7"
         >
-          Fullstack Developer
+          MERN Stack Developer
         </motion.h2>
 
         <motion.p
@@ -92,7 +92,7 @@ export default function Hero() {
           </button>
 
           <a
-            href="/resume.pdf.pdf"
+            href="/Ytcv.pdf"
             download
             className="px-6 py-3 rounded-full border border-purple-400 text-purple-300 
               font-semibold hover:bg-purple-600/20 transition"

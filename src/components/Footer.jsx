@@ -13,7 +13,7 @@ function Footer() {
           </div>
 
           {/* Center - Navigation */}
-          {/* <nav className="flex gap-8 text-gray-300 text-lg">
+          <nav className="flex gap-8 text-gray-300 text-lg">
             <a href="#home" className="hover:text-white transition">
               Home
             </a>
@@ -29,7 +29,7 @@ function Footer() {
             <a href="#contact" className="hover:text-white transition">
               Contact
             </a>
-          </nav> */}
+          </nav>
 
           {/* Right - Social Icons */}
           <div className="flex gap-5 mt-6 md:mt-0">

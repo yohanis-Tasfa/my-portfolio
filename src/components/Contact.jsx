@@ -123,7 +123,7 @@ export default function Contact() {
                   rows="5"
                   name="message"
                   required
-                  placeholder="Tell me about your project or idea..."
+                  placeholder="Write your message..."
                   className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
                 ></textarea>
               </div>

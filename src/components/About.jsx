@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import MyPhoto from "../assets/images/profile.png";
+import { FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 
 const _motion = motion;
 
@@ -26,12 +28,29 @@ const About = () => {
           transition={{ duration: 1 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          whileHover={{ scale: 1.06, y: -10 }}
         >
-          <img
-            src={MyPhoto}
-            alt="Profile"
-            className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover shadow-[0_0_40px_rgba(245,158,11,0.45)] border-4 border-amber-500"
-          />
+          <div className="relative">
+            <img
+              src={MyPhoto}
+              alt="Profile"
+              className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover shadow-[0_0_40px_rgba(245,158,11,0.45)] border-4 border-amber-500"
+            />
+
+            {/* Tech stack icons around the border */}
+            <span className="absolute -top-4 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+              <FaHtml5 size={20} />
+            </span>
+            <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+              <FaNodeJs size={20} />
+            </span>
+            <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+              <FaReact size={20} />
+            </span>
+            <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+              <SiMongodb size={20} />
+            </span>
+          </div>
         </motion.div>
 
         {/* RIGHT — TEXT */}

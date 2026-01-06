@@ -14,20 +14,8 @@ const About = () => {
       {/* BACKGROUND gradient layer */}
       <div className="absolute inset-0 bg-transparent"></div>
 
-      {/* PURPLE GLOW */}
-      <div
-        className="
-          absolute 
-          w-[300px] h-[300px] 
-          md:w-[500px] md:h-[500px]
-          bg-amber-500/20 
-          blur-[150px] md:blur-[200px]
-          rounded-full
-          top-1/2 left-1/2 
-          -translate-x-1/2 -translate-y-1/2
-          pointer-events-none
-        "
-      ></div>
+      {/* Dark overlay to match black background */}
+      <div className="absolute inset-0 bg-black/65"></div>
 
       {/* CONTENT */}
       <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">

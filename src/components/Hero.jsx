@@ -39,10 +39,7 @@ export default function Hero() {
     >
       {/* Purple Glow Background */}
       <div className="absolute inset-0 bg-transparent"></div>
-      <div
-        className="absolute w-[500px] h-[500px] bg-amber-500/20 blur-[200px] rounded-full 
-        top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      ></div>
+      <div className="absolute inset-0 bg-black/55"></div>
 
       {/* Motion Content */}
       <motion.div

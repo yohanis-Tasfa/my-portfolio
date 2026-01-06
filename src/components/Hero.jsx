@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+const _motion = motion;
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -36,9 +38,9 @@ export default function Hero() {
       className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden"
     >
       {/* Purple Glow Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0f0120] to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
       <div
-        className="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[200px] rounded-full 
+        className="absolute w-[500px] h-[500px] bg-amber-500/20 blur-[200px] rounded-full 
         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       ></div>
 
@@ -52,22 +54,22 @@ export default function Hero() {
       >
         <motion.h1
           variants={item}
-          className="text-5xl md:text-6xl font-bold text-blue-300 mb-3"
+          className="text-5xl md:text-6xl font-bold text-amber-200 mb-3"
         >
           Hi, I'm
         </motion.h1>
 
         <motion.h1
           variants={item}
-          className="text-5xl md:text-6xl font-bold text-purple-400 mb-3"
+          className="text-5xl md:text-6xl font-bold text-amber-400 mb-3"
         >
-          Yohanis <span className="text-purple-400">Tasfa</span>
+          Yohanis <span className="text-amber-400">Tasfa</span>
         </motion.h1>
 
         <motion.h2
           variants={item}
           className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text 
-            bg-gradient-to-r from-purple-300 to-blue-400 mb-7"
+            bg-gradient-to-r from-amber-200 to-amber-500 mb-7"
         >
           MERN Stack Developer
         </motion.h2>
@@ -85,7 +87,7 @@ export default function Hero() {
         <motion.div variants={item} className="flex justify-center gap-6">
           <button
             onClick={() => scrollToSection("projects")}
-            className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 
             text-white font-semibold shadow-lg hover:opacity-90 transition"
           >
             View My Work ↓
@@ -94,8 +96,8 @@ export default function Hero() {
           <a
             href="/Ytcv.pdf"
             download
-            className="px-6 py-3 rounded-full border border-purple-400 text-purple-300 
-              font-semibold hover:bg-purple-600/20 transition"
+            className="px-6 py-3 rounded-full border border-amber-400 text-amber-300 
+              font-semibold hover:bg-amber-500/10 transition"
           >
             Download CV
           </a>

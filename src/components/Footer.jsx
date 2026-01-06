@@ -2,7 +2,7 @@ import { Github, Linkedin, Send, Mail } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#050508] border-t border-white/10 relative py-10">
+    <footer className="w-full bg-black border-t border-white/10 relative py-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row items-center justify-between py-6">
@@ -46,7 +46,7 @@ function Footer() {
               target="_blank"
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition"
             >
-              <Linkedin className="text-sky-400" size={22} />
+              <Linkedin className="text-amber-400" size={22} />
             </a>
 
             <a
@@ -54,14 +54,14 @@ function Footer() {
               target="_blank"
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition"
             >
-              <Send className="text-blue-400" size={22} />
+              <Send className="text-amber-400" size={22} />
             </a>
 
             <a
               href="mailto:yohanistesfa457@gmail.com"
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition"
             >
-              <Mail className="text-red-400" size={22} />
+              <Mail className="text-amber-400" size={22} />
             </a>
           </div>
         </div>

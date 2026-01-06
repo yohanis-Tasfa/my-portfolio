@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import MyPhoto from "../assets/images/profile.png";
 
+const _motion = motion;
+
 const About = () => {
   return (
     <section
@@ -10,7 +12,7 @@ const About = () => {
       className="relative w-full text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
       {/* BACKGROUND gradient layer */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0f0120] to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
 
       {/* PURPLE GLOW */}
       <div
@@ -18,7 +20,7 @@ const About = () => {
           absolute 
           w-[300px] h-[300px] 
           md:w-[500px] md:h-[500px]
-          bg-purple-600/30 
+          bg-amber-500/20 
           blur-[150px] md:blur-[200px]
           rounded-full
           top-1/2 left-1/2 
@@ -40,7 +42,7 @@ const About = () => {
           <img
             src={MyPhoto}
             alt="Profile"
-            className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover shadow-[0_0_40px_rgba(168,85,247,0.5)] border-4 border-purple-500"
+            className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover shadow-[0_0_40px_rgba(245,158,11,0.45)] border-4 border-amber-500"
           />
         </motion.div>
 
@@ -52,7 +54,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-purple-500">About Me</span>
+            <span className="text-amber-400">About Me</span>
           </h2>
 
           <p className="text-gray-300 leading-relaxed text-lg mb-6">

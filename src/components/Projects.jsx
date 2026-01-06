@@ -2,15 +2,17 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { projects } from "../assets/proInfo";
 
+const _motion = motion;
+
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-[#07010f] relative overflow-hidden"
+      className="py-24 bg-black relative overflow-hidden"
     >
       {/* Background Glow */}
       <div
-        className="absolute w-[450px] h-[450px] bg-purple-600/25 blur-[200px] rounded-full 
+        className="absolute w-[450px] h-[450px] bg-amber-500/15 blur-[200px] rounded-full 
       top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       ></div>
 
@@ -22,7 +24,7 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Featured <span className="text-purple-400">Projects</span>
+          Featured <span className="text-amber-400">Projects</span>
         </motion.h2>
 
         {/* 3 Column Grid */}
@@ -30,10 +32,9 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-[#0f0a1a]/60 border border-white/10 rounded-2xl p-5 shadow-xl 
-              backdrop-blur-xl hover:shadow-purple-500/20 transition-all duration-300"
-              whileHover={{ scale: 1.13 }}
-              transition={{ duration: 0.3 }}
+              className="bg-black/50 border border-white/10 rounded-2xl p-5 shadow-xl 
+              backdrop-blur-xl hover:shadow-amber-500/20 transition-all duration-300"
+              whileHover={{ scale: 1.13, transition: { duration: 0.3 } }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -48,7 +49,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded-xl h-40 object-cover w-full shadow-[0_0_20px_rgba(168,85,247,0.25)]"
+                  className="rounded-xl h-40 object-cover w-full shadow-[0_0_20px_rgba(245,158,11,0.22)]"
                 />
               </motion.div>
 
@@ -67,9 +68,9 @@ export default function Projects() {
                 {project.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="group px-3 py-1 rounded-full bg-[#12051d] border border-gray-600 
+                    className="group px-3 py-1 rounded-full bg-black/40 border border-gray-600 
       text-gray-300 text-xs transition-all duration-300 cursor-default
-      hover:bg-purple-600/30 hover:text-white hover:border-purple-400 hover:shadow-[0_0_10px_rgba(168,85,247,0.5)] hover:scale-105"
+      hover:bg-amber-500/15 hover:text-white hover:border-amber-400 hover:shadow-[0_0_10px_rgba(245,158,11,0.45)] hover:scale-105"
                   >
                     {t}
                   </span>
@@ -81,8 +82,8 @@ export default function Projects() {
                 <a
                   href={project.demo}
                   target="_blank"
-                  className="flex items-center gap-2 bg-purple-500/90 text-white px-3 py-2 rounded-lg 
-                  hover:bg-purple-500 transition shadow-[0_0_12px_rgba(168,85,247,0.4)] text-xs"
+                  className="flex items-center gap-2 bg-amber-500/90 text-black px-3 py-2 rounded-lg 
+                  hover:bg-amber-500 transition shadow-[0_0_12px_rgba(245,158,11,0.35)] text-xs"
                 >
                   <ExternalLink size={14} /> Demo
                 </a>

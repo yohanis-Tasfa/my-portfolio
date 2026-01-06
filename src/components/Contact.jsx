@@ -47,7 +47,7 @@ export default function Contact() {
       id="contact"
       className="min-h-screen pt-24 pb-32 px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0018] to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
 
       <motion.div
         variants={container}
@@ -128,7 +128,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="mt-6 w-full flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 transition text-white p-3 rounded-xl font-semibold"
+                className="mt-6 w-full flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 transition text-black p-3 rounded-xl font-semibold"
               >
                 {result ? result : "Send Message"}
               </button>

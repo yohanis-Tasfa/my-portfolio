@@ -27,7 +27,7 @@ function Skills() {
       className="min-h-screen pt-20 pb-32 px-4 relative overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
+      <div className="absolute inset-0 bg-transparent"></div>
       <div
         className="absolute w-[500px] h-[500px] bg-amber-500/20 blur-[200px] rounded-full 
         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -133,9 +133,7 @@ function Skills() {
                 className="text-amber-400 group-hover:text-amber-100"
               />
             </motion.div>
-            <h3 className="text-xl font-semibold mt-5 text-amber-300">
-              Tools
-            </h3>
+            <h3 className="text-xl font-semibold mt-5 text-amber-300">Tools</h3>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
               {["Git", "GitHub", "VS Code", "Render", "Vercel"].map((skill) => (

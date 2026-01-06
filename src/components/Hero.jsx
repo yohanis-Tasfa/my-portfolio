@@ -38,7 +38,7 @@ export default function Hero() {
       className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden"
     >
       {/* Purple Glow Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
+      <div className="absolute inset-0 bg-transparent"></div>
       <div
         className="absolute w-[500px] h-[500px] bg-amber-500/20 blur-[200px] rounded-full 
         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"

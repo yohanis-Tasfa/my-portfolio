@@ -47,7 +47,7 @@ export default function Contact() {
       id="contact"
       className="min-h-screen pt-24 pb-32 px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
+      <div className="absolute inset-0 bg-transparent"></div>
 
       <motion.div
         variants={container}

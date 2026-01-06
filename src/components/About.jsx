@@ -12,7 +12,7 @@ const About = () => {
       className="relative w-full text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
       {/* BACKGROUND gradient layer */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-amber-950 to-black"></div>
+      <div className="absolute inset-0 bg-transparent"></div>
 
       {/* PURPLE GLOW */}
       <div

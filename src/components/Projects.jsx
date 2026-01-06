@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-black relative overflow-hidden"
+      className="py-24 bg-transparent relative overflow-hidden"
     >
       {/* Background Glow */}
       <div

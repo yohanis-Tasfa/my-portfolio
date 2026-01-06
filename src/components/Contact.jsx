@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { Github, Linkedin, Send, Mail } from "lucide-react";
 
+const _motion = motion;
+
 const container = {
   hidden: { opacity: 0, y: 30 },
   show: {

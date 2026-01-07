@@ -39,7 +39,7 @@ export default function Hero() {
     >
       {/* Purple Glow Background */}
       <div className="absolute inset-0 bg-transparent"></div>
-      <div className="absolute inset-0 bg-black/55"></div>
+      <div className="absolute inset-0 bg-[color:var(--overlay)]"></div>
 
       {/* Motion Content */}
       <motion.div
@@ -73,7 +73,7 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="text-gray-300 text-xl max-w-2xl mx-auto leading-relaxed mb-12"
+          className="text-[color:var(--color-muted)] text-xl max-w-2xl mx-auto leading-relaxed mb-12"
         >
           Turning ideas into seamless digital experiences. I craft clean,
           efficient code, design with intention, and build web solutions that
@@ -85,7 +85,7 @@ export default function Hero() {
           <button
             onClick={() => scrollToSection("projects")}
             className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 
-            text-white font-semibold shadow-lg hover:opacity-90 transition"
+            text-[color:var(--color-fg)] font-semibold shadow-lg hover:opacity-90 transition"
           >
             View My Work ↓
           </button>

@@ -28,7 +28,7 @@ function Skills() {
     >
       {/* Background */}
       <div className="absolute inset-0 bg-transparent"></div>
-      <div className="absolute inset-0 bg-black/55"></div>
+      <div className="absolute inset-0 bg-[color:var(--overlay)]"></div>
 
       <motion.div
         variants={container}
@@ -38,10 +38,7 @@ function Skills() {
         className="relative z-10 max-w-6xl mx-auto text-center"
       >
         {/* Title */}
-        <motion.h1
-          variants={item}
-          className="text-4xl md:text-5xl font-bold text-white"
-        >
+        <motion.h1 variants={item} className="text-4xl md:text-5xl font-bold">
           Skills <span className="text-amber-400">& Expertise</span>
         </motion.h1>
 
@@ -77,7 +74,7 @@ function Skills() {
                 (skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm shadow-lg bg-amber-500/10 group-hover:bg-amber-500/20 group-hover:text-white"
+                    className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm shadow-lg bg-amber-500/10 group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
                   >
                     {skill}
                   </span>
@@ -108,7 +105,7 @@ function Skills() {
                 (skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm bg-amber-500/10 shadow-lg group-hover:bg-amber-500/20 group-hover:text-white"
+                    className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm bg-amber-500/10 shadow-lg group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
                   >
                     {skill}
                   </span>
@@ -136,7 +133,7 @@ function Skills() {
               {["Git", "GitHub", "VS Code", "Render", "Vercel"].map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm bg-amber-500/10 shadow-lg group-hover:bg-amber-500/20 group-hover:text-white"
+                  className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm bg-amber-500/10 shadow-lg group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
                 >
                   {skill}
                 </span>

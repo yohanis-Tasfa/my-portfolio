@@ -33,19 +33,30 @@
 }
 
 :root {
-  color-scheme: dark;
-  /* Ambient background (dark + warm gold glow) */
-  --color-bg: #050508;
-  --color-fg: #fff;
   --color-accent: #d4af37;
   --bg-gold: 212, 175, 55;
   --bg-olive: 40, 90, 70;
 }
 
-body {
-  font-family: "Satoshi", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  background: radial-gradient(
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-fg: #ffffff;
+  --color-muted: rgb(209 213 219);
+  --color-muted-2: rgb(156 163 175);
+
+  --overlay: rgba(0, 0, 0, 0.55);
+  --surface: rgba(0, 0, 0, 0.5);
+  --surface-strong: rgba(0, 0, 0, 0.7);
+  --surface-hover: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-text: rgb(229 231 235);
+
+  --nav-bg: rgba(0, 0, 0, 0.2);
+
+  --body-bg: radial-gradient(
       1000px 700px at 18% 25%,
       rgba(var(--bg-gold), 0.28),
       transparent 62%
@@ -61,6 +72,48 @@ body {
       transparent 62%
     ),
     linear-gradient(135deg, #050508 0%, #0b0c10 55%, #070a12 100%);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-fg: #0b0c10;
+  --color-muted: rgb(55 65 81);
+  --color-muted-2: rgb(75 85 99);
+
+  --overlay: rgba(255, 255, 255, 0.65);
+  --surface: rgba(255, 255, 255, 0.65);
+  --surface-strong: rgba(255, 255, 255, 0.85);
+  --surface-hover: rgba(0, 0, 0, 0.06);
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.14);
+
+  --input-bg: rgba(255, 255, 255, 0.85);
+  --input-text: rgb(17 24 39);
+
+  --nav-bg: rgba(255, 255, 255, 0.35);
+
+  --body-bg: radial-gradient(
+      1000px 700px at 18% 25%,
+      rgba(var(--bg-gold), 0.18),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 650px at 82% 22%,
+      rgba(var(--bg-gold), 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 700px at 78% 85%,
+      rgba(var(--bg-olive), 0.1),
+      transparent 62%
+    ),
+    linear-gradient(135deg, #f8fafc 0%, #f1f5f9 55%, #ffffff 100%);
+}
+
+body {
+  font-family: "Satoshi", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--body-bg);
   color: var(--color-fg);
 }
 

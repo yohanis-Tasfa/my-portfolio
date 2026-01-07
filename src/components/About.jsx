@@ -11,13 +11,13 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative w-full text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
+      className="relative w-full py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
       {/* BACKGROUND gradient layer */}
       <div className="absolute inset-0 bg-transparent"></div>
 
       {/* Dark overlay to match black background */}
-      <div className="absolute inset-0 bg-black/65"></div>
+      <div className="absolute inset-0 bg-[color:var(--overlay)]"></div>
 
       {/* CONTENT */}
       <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -38,16 +38,16 @@ const About = () => {
             />
 
             {/* Tech stack icons around the border */}
-            <span className="absolute -top-4 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+            <span className="absolute -top-4 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-[color:var(--surface-strong)] border border-[color:var(--border)] backdrop-blur flex items-center justify-center text-amber-400">
               <FaHtml5 size={20} />
             </span>
-            <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+            <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-[color:var(--surface-strong)] border border-[color:var(--border)] backdrop-blur flex items-center justify-center text-amber-400">
               <FaNodeJs size={20} />
             </span>
-            <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+            <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[color:var(--surface-strong)] border border-[color:var(--border)] backdrop-blur flex items-center justify-center text-amber-400">
               <FaReact size={20} />
             </span>
-            <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/70 border border-white/10 backdrop-blur flex items-center justify-center text-amber-400">
+            <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[color:var(--surface-strong)] border border-[color:var(--border)] backdrop-blur flex items-center justify-center text-amber-400">
               <SiMongodb size={20} />
             </span>
           </div>
@@ -64,7 +64,7 @@ const About = () => {
             <span className="text-amber-400">About Me</span>
           </h2>
 
-          <p className="text-gray-300 leading-relaxed text-lg mb-6">
+          <p className="text-[color:var(--color-muted)] leading-relaxed text-lg mb-6">
             I’m a full-stack developer with a deep interest in creating
             efficient, scalable, and visually appealing web solutions. I’ve
             built multiple hands-on projects that strengthened my understanding
@@ -75,7 +75,7 @@ const About = () => {
 
           <h3 className="text-2xl font-semibold mb-3">Beyond Code</h3>
 
-          <p className="text-gray-400 leading-relaxed text-lg">
+          <p className="text-[color:var(--color-muted-2)] leading-relaxed text-lg">
             When I’m not coding, I explore design trends, contribute to open
             source, and share ideas with the developer community. I believe
             teamwork and creativity build the best products.

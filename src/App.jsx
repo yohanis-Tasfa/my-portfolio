@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-[color:var(--color-fg)]">
       <ToastContainer />
       <Navbar />
       <Hero />

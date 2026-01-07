@@ -58,11 +58,11 @@ export default function Contact() {
         viewport={{ once: true }}
         className="relative max-w-6xl mx-auto"
       >
-        <h1 className="text-center text-4xl md:text-5xl font-bold text-white">
+        <h1 className="text-center text-4xl md:text-5xl font-bold">
           Get In Touch
         </h1>
 
-        <p className="text-center text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
+        <p className="text-center text-[color:var(--color-muted)] mt-4 max-w-2xl mx-auto text-lg">
           Ready to bring your ideas to life? Let's collaborate and create
           something amazing together.
         </p>
@@ -74,7 +74,7 @@ export default function Contact() {
             <motion.form
               onSubmit={onSubmit}
               variants={container}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-lg max-w-2xl w-full"
+              className="bg-[color:var(--surface)] backdrop-blur-xl border border-[color:var(--border)] p-8 md:p-10 rounded-3xl shadow-lg max-w-2xl w-full"
             >
               <input
                 type="hidden"
@@ -84,47 +84,55 @@ export default function Contact() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-gray-300 text-sm">Name </label>
+                  <label className="text-[color:var(--color-muted)] text-sm">
+                    Name{" "}
+                  </label>
                   <input
                     type="text"
                     name="name"
                     required
                     placeholder="Your full name"
-                    className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
+                    className="w-full mt-2 p-3 bg-[color:var(--input-bg)] border border-[color:var(--border)] rounded-xl text-[color:var(--input-text)]"
                   />
                 </div>
 
                 <div>
-                  <label className="text-gray-300 text-sm">Email </label>
+                  <label className="text-[color:var(--color-muted)] text-sm">
+                    Email{" "}
+                  </label>
                   <input
                     type="email"
                     name="email"
                     required
                     placeholder="your.email@example.com"
-                    className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
+                    className="w-full mt-2 p-3 bg-[color:var(--input-bg)] border border-[color:var(--border)] rounded-xl text-[color:var(--input-text)]"
                   />
                 </div>
               </div>
 
               <div className="mt-6">
-                <label className="text-gray-300 text-sm">Subject </label>
+                <label className="text-[color:var(--color-muted)] text-sm">
+                  Subject{" "}
+                </label>
                 <input
                   type="text"
                   name="subject"
                   required
                   placeholder="Project inquiry, collaboration, etc."
-                  className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
+                  className="w-full mt-2 p-3 bg-[color:var(--input-bg)] border border-[color:var(--border)] rounded-xl text-[color:var(--input-text)]"
                 />
               </div>
 
               <div className="mt-6">
-                <label className="text-gray-300 text-sm">Message </label>
+                <label className="text-[color:var(--color-muted)] text-sm">
+                  Message{" "}
+                </label>
                 <textarea
                   rows="5"
                   name="message"
                   required
                   placeholder="Write your message..."
-                  className="w-full mt-2 p-3 bg-white/5 border border-white/10 rounded-xl text-gray-200"
+                  className="w-full mt-2 p-3 bg-[color:var(--input-bg)] border border-[color:var(--border)] rounded-xl text-[color:var(--input-text)]"
                 ></textarea>
               </div>
 

@@ -70,16 +70,21 @@ function Skills() {
             </h3>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
-              {["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"].map(
-                (skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm shadow-lg bg-amber-500/10 group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
-                  >
-                    {skill}
-                  </span>
-                )
-              )}
+              {[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Tailwind CSS",
+                "React",
+                "TypeScript",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm shadow-lg bg-amber-500/10 group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -130,14 +135,16 @@ function Skills() {
             <h3 className="text-xl font-semibold mt-5 text-amber-300">Tools</h3>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
-              {["Git", "GitHub", "VS Code", "Render", "Vercel"].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm bg-amber-500/10 shadow-lg group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
-                >
-                  {skill}
-                </span>
-              ))}
+              {["Git", "GitHub", "VS Code", "Render", "Vercel", "Postman"].map(
+                (skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-1 rounded-full border border-amber-400 text-amber-300 text-sm bg-amber-500/10 shadow-lg group-hover:bg-amber-500/20 group-hover:text-[color:var(--color-fg)]"
+                  >
+                    {skill}
+                  </span>
+                )
+              )}
             </div>
           </div>
         </motion.div>

@@ -3,17 +3,17 @@ import { Code, Server, Wrench } from "lucide-react";
 
 const _motion = motion;
 
-// const container = {
-//   hidden: { opacity: 0 },
-//   show: {
-//     opacity: 1,
-//     transition: {
-//       staggerChildren: 0.2,
-//       duration: 0.8,
-//       ease: "easeOut",
-//     },
-//   },
-// };
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 const item = {
   hidden: { opacity: 0, y: 20 },

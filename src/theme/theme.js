@@ -17,7 +17,7 @@ export function getStoredThemeSelection() {
   } catch {
     // ignore
   }
-  return "system";
+  return "dark";
 }
 
 export function setStoredThemeSelection(selection) {

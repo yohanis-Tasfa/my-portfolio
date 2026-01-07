@@ -1,10 +1,27 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X, Sun, Moon, Monitor, ChevronDown } from "lucide-react";
 import { useTheme } from "../theme/ThemeProvider.jsx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { selection, setSelection } = useTheme();
+  const { selection, setSelection, resolvedTheme } = useTheme();
+  const [isThemeOpen, setIsThemeOpen] = useState(false);
+  const themeMenuDesktopRef = useRef(null);
+  const themeMenuMobileRef = useRef(null);
+
+  useEffect(() => {
+    const onPointerDown = (e) => {
+      const inDesktop = themeMenuDesktopRef.current?.contains(e.target);
+      const inMobile = themeMenuMobileRef.current?.contains(e.target);
+      if (inDesktop || inMobile) return;
+      setIsThemeOpen(false);
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, []);
+
+  const ThemeIcon = selection === "system" ? Monitor : resolvedTheme === "dark" ? Moon : Sun;
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -55,41 +72,130 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <select
-            aria-label="Theme"
-            value={selection}
-            onChange={(e) => setSelection(e.target.value)}
-            className="text-sm rounded-lg px-3 py-2 bg-[color:var(--surface)] border border-[color:var(--border)] text-[color:var(--color-fg)]"
-          >
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
+          <div className="relative" ref={themeMenuDesktopRef}>
+            <button
+              type="button"
+              aria-label="Theme"
+              aria-haspopup="menu"
+              aria-expanded={isThemeOpen}
+              onClick={() => setIsThemeOpen((v) => !v)}
+              className="flex items-center gap-2 text-sm rounded-lg px-3 py-2 bg-[color:var(--surface)] border border-[color:var(--border)] text-[color:var(--color-fg)]"
+            >
+              <ThemeIcon size={18} />
+              <ChevronDown size={16} className="opacity-70" />
+            </button>
+
+            {isThemeOpen && (
+              <div
+                role="menu"
+                className="absolute right-0 mt-2 w-40 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)] backdrop-blur-lg p-2"
+              >
+                <button
+                  role="menuitem"
+                  type="button"
+                  onClick={() => {
+                    setSelection("dark");
+                    setIsThemeOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-[color:var(--color-fg)] hover:bg-[color:var(--surface-hover)]"
+                >
+                  <Moon size={16} /> Dark
+                </button>
+                <button
+                  role="menuitem"
+                  type="button"
+                  onClick={() => {
+                    setSelection("light");
+                    setIsThemeOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-[color:var(--color-fg)] hover:bg-[color:var(--surface-hover)]"
+                >
+                  <Sun size={16} /> Light
+                </button>
+                <button
+                  role="menuitem"
+                  type="button"
+                  onClick={() => {
+                    setSelection("system");
+                    setIsThemeOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-[color:var(--color-fg)] hover:bg-[color:var(--surface-hover)]"
+                >
+                  <Monitor size={16} /> System
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-[color:var(--color-fg)]"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
-        </button>
+        {/* Mobile Controls */}
+        <div className="md:hidden flex items-center gap-3">
+          <div className="relative" ref={themeMenuMobileRef}>
+            <button
+              type="button"
+              aria-label="Theme"
+              aria-haspopup="menu"
+              aria-expanded={isThemeOpen}
+              onClick={() => setIsThemeOpen((v) => !v)}
+              className="flex items-center justify-center rounded-lg px-3 py-2 bg-[color:var(--surface)] border border-[color:var(--border)] text-[color:var(--color-fg)]"
+            >
+              <ThemeIcon size={18} />
+            </button>
+
+            {isThemeOpen && (
+              <div
+                role="menu"
+                className="absolute right-0 mt-2 w-40 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)] backdrop-blur-lg p-2"
+              >
+                <button
+                  role="menuitem"
+                  type="button"
+                  onClick={() => {
+                    setSelection("dark");
+                    setIsThemeOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-[color:var(--color-fg)] hover:bg-[color:var(--surface-hover)]"
+                >
+                  <Moon size={16} /> Dark
+                </button>
+                <button
+                  role="menuitem"
+                  type="button"
+                  onClick={() => {
+                    setSelection("light");
+                    setIsThemeOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-[color:var(--color-fg)] hover:bg-[color:var(--surface-hover)]"
+                >
+                  <Sun size={16} /> Light
+                </button>
+                <button
+                  role="menuitem"
+                  type="button"
+                  onClick={() => {
+                    setSelection("system");
+                    setIsThemeOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-[color:var(--color-fg)] hover:bg-[color:var(--surface-hover)]"
+                >
+                  <Monitor size={16} /> System
+                </button>
+              </div>
+            )}
+          </div>
+
+          <button
+            className="text-[color:var(--color-fg)]"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="absolute  right-6 top-20 bg-[color:var(--surface-strong)] backdrop-blur-lg p-6 rounded-xl w-44 flex flex-col gap-4 md:hidden border border-[color:var(--border)]">
-          <select
-            aria-label="Theme"
-            value={selection}
-            onChange={(e) => setSelection(e.target.value)}
-            className="text-sm rounded-lg px-3 py-2 bg-[color:var(--surface)] border border-[color:var(--border)] text-[color:var(--color-fg)]"
-          >
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-
           <span
             className="cursor-pointer text-[color:var(--color-fg)] hover:text-amber-400"
             onClick={() => scrollToSection("home")}

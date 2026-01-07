@@ -21,7 +21,8 @@ export default function Navbar() {
     return () => document.removeEventListener("pointerdown", onPointerDown);
   }, []);
 
-  const ThemeIcon = selection === "system" ? Monitor : resolvedTheme === "dark" ? Moon : Sun;
+  const ThemeIcon =
+    selection === "system" ? Monitor : resolvedTheme === "dark" ? Moon : Sun;
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);

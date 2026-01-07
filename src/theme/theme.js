@@ -17,6 +17,7 @@ export function getStoredThemeSelection() {
   } catch {
     // ignore
   }
+  // Always default to dark, never system
   return "dark";
 }
 
@@ -62,6 +63,7 @@ export function onSystemThemeChange(callback) {
 }
 
 export function bootstrapTheme() {
+  // Always force dark on first load if no user choice
   const selection = getStoredThemeSelection();
   applyThemeSelection(selection);
 }

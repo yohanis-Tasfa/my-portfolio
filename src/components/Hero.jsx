@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TypewriterText from "./TypewriterText";
 
 const _motion = motion;
 
@@ -51,24 +52,46 @@ export default function Hero() {
       >
         <motion.h1
           variants={item}
-          className="text-5xl md:text-6xl font-bold text-amber-200 mb-3"
+          className="text-5xl md:text-6xl font-bold text-amber-200 mb-3 flex flex-col items-center min-h-[120px]"
         >
-          Hi, I'm
+          <span className="block w-full">
+            <TypewriterText
+              className="inline-block"
+              options={{
+                strings: [
+                  "Hi, I'm <span class='text-amber-400'>Yohanis Tasfa</span>",
+                  "Welcome to my portfolio!",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 60,
+                deleteSpeed: 40,
+                pauseFor: 1800,
+                html: true,
+              }}
+            />
+          </span>
         </motion.h1>
-
-        <motion.h1
-          variants={item}
-          className="text-5xl md:text-6xl font-bold text-amber-400 mb-3"
-        >
-          Yohanis <span className="text-amber-400">Tasfa</span>
-        </motion.h1>
-
         <motion.h2
           variants={item}
-          className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text 
-            bg-gradient-to-r from-amber-200 to-amber-500 mb-7"
+          className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500 mb-7 min-h-[48px]"
         >
-          MERN Stack Developer
+          <TypewriterText
+            className="inline-block"
+            options={{
+              strings: [
+                'MERN Stack Developer',
+                'UI/UX Enthusiast',
+                'React & Node.js Specialist',
+                'Building Modern Web Experiences',
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              deleteSpeed: 30,
+              pauseFor: 1200,
+            }}
+          />
         </motion.h2>
 
         <motion.p

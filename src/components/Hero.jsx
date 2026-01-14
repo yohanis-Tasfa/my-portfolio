@@ -67,6 +67,7 @@ export default function Hero() {
                 deleteSpeed: 0,
                 pauseFor: 9999999,
                 html: true,
+                cursor: "",
               }}
             />
           </span>

@@ -80,10 +80,10 @@ export default function Hero() {
             className="inline-block"
             options={{
               strings: [
-                'MERN Stack Developer',
-                'UI/UX Enthusiast',
-                'React & Node.js Specialist',
-                'Building Modern Web Experiences',
+                "MERN Stack Developer",
+                "UI/UX Enthusiast",
+                "React & Node.js Specialist",
+                "Building Modern Web Experiences",
               ],
               autoStart: true,
               loop: true,

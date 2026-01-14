@@ -60,13 +60,12 @@ export default function Hero() {
               options={{
                 strings: [
                   "Hi, I'm <span class='text-amber-400'>Yohanis Tasfa</span>",
-                  "Welcome to my portfolio!",
                 ],
                 autoStart: true,
-                loop: true,
+                loop: false,
                 delay: 60,
-                deleteSpeed: 40,
-                pauseFor: 1800,
+                deleteSpeed: 0,
+                pauseFor: 9999999,
                 html: true,
               }}
             />

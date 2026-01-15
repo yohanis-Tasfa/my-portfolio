@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import TypewriterText from "./TypewriterText";
+import MyPhoto from "../assets/images/profile.png";
 
 const _motion = motion;
 
@@ -50,6 +51,19 @@ export default function Hero() {
         whileInView="show"
         viewport={{ once: false }} //  makes animation rerun
       >
+        <motion.div
+          variants={item}
+          className="flex justify-center mb-8"
+          whileHover={{ scale: 1.06, y: -8 }}
+          transition={{ type: "spring", stiffness: 220, damping: 18 }}
+        >
+          <img
+            src={MyPhoto}
+            alt="Profile"
+            className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover shadow-[0_0_40px_rgba(245,158,11,0.35)] border-4 border-amber-500"
+          />
+        </motion.div>
+
         <motion.h1
           variants={item}
           className="text-5xl md:text-6xl font-bold text-amber-200 mb-3 flex flex-col items-center min-h-[120px]"

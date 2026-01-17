@@ -79,10 +79,10 @@ const About = () => {
       >
         {/* Heading */}
         <motion.div variants={item} className="text-center max-w-3xl mx-auto">
-          <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] backdrop-blur-xl text-[color:var(--color-muted)]">
+          {/* <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] backdrop-blur-xl text-[color:var(--color-muted)]">
             <Sparkles size={16} className="text-amber-300" />
             A little introduction
-          </p>
+          </p> */}
 
           <h2 className="text-4xl md:text-5xl font-bold mt-5">
             About <span className="text-amber-400">Me</span>

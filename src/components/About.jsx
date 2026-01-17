@@ -49,13 +49,14 @@ function InfoCard({ icon: Icon, title, children }) {
 }
 
 const About = () => {
-  // const highlights = [
-  //   "MERN Stack",
-  //   "Clean Architecture",
-  //   "Responsive UI",
-  //   "Performance",
-  //   "Accessibility",
-  // ];
+  const highlights = [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "Framer Motion",
+    "REST APIs",
+  ];
 
   return (
     <section
@@ -95,20 +96,21 @@ const About = () => {
           {/* Left */}
           <motion.div variants={item} className="space-y-7">
             <p className="text-[color:var(--color-muted)] leading-relaxed text-lg">
-              I’m a full-stack developer focused on building fast, scalable, and
-              modern web applications. I enjoy turning ideas into polished
-              products—balancing clean code, great UX, and reliable backend
-              logic.
+              I’m a full‑stack developer who likes building things people can
+              actually use. Most of my recent work has been hands‑on projects
+              (an Amazon-style e‑commerce clone, a Netflix UI, and a real‑estate
+              app) where I focused on clean UI, solid data flow, and practical
+              features.
             </p>
 
             <p className="text-[color:var(--color-muted-2)] leading-relaxed text-lg">
-              I’m constantly improving my craft by shipping projects,
-              experimenting with new tools, and learning best practices that
-              make apps easier to maintain and evolve.
+              What matters to me is consistency: readable components, predictable
+              state, and backend code that’s easy to extend. I’m always learning,
+              but I try to keep it grounded—ship, iterate, then improve.
             </p>
 
             {/* Highlights */}
-            {/* <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {highlights.map((label) => (
                 <span
                   key={label}
@@ -117,7 +119,7 @@ const About = () => {
                   {label}
                 </span>
               ))}
-            </div> */}
+            </div>
 
             {/* Stats */}
             <motion.dl
@@ -158,16 +160,16 @@ const About = () => {
           {/* Right */}
           <motion.div variants={item} className="grid gap-5">
             <InfoCard icon={Code2} title="What I build">
-              Full-stack web apps with thoughtful UI, smooth interactions, and
-              solid backend foundations.
+              Full‑stack apps with real pages and real flows—auth, dashboards,
+              APIs, and UI that feels fast.
             </InfoCard>
             <InfoCard icon={Layers} title="How I work">
-              I like reusable components, consistent patterns, and small,
-              testable pieces that make teams move faster.
+              I keep things simple: reusable components, consistent styling,
+              and small modules that are easy to change later.
             </InfoCard>
             <InfoCard icon={ShieldCheck} title="What I care about">
-              Maintainability, security basics, and performance—so your product
-              stays reliable as it grows.
+              Performance and reliability. I pay attention to loading states,
+              edge cases, and the small details that make an app feel polished.
             </InfoCard>
           </motion.div>
         </div>

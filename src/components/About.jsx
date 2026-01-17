@@ -49,13 +49,13 @@ function InfoCard({ icon: Icon, title, children }) {
 }
 
 const About = () => {
-  const highlights = [
-    "MERN Stack",
-    "Clean Architecture",
-    "Responsive UI",
-    "Performance",
-    "Accessibility",
-  ];
+  // const highlights = [
+  //   "MERN Stack",
+  //   "Clean Architecture",
+  //   "Responsive UI",
+  //   "Performance",
+  //   "Accessibility",
+  // ];
 
   return (
     <section
@@ -108,7 +108,7 @@ const About = () => {
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-wrap gap-2">
+            {/* <div className="flex flex-wrap gap-2">
               {highlights.map((label) => (
                 <span
                   key={label}
@@ -117,7 +117,7 @@ const About = () => {
                   {label}
                 </span>
               ))}
-            </div>
+            </div> */}
 
             {/* Stats */}
             <motion.dl
